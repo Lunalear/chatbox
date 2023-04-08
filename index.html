@@ -64,8 +64,11 @@
                 $('#message').val('')
             }
         });
+        var txt = 0
         socket.on('create message',(msg)=>{
-            $('#message-box').append('<li class="text-secondary">'+ msg +'</li>')
+            $('#message-box').append('<li class="text-secondary txt'+ txt + '"></li>');
+            $('.txt'+txt).text(msg)
+            txt ++;
         });
     </script>
 </body>
